@@ -804,30 +804,28 @@ background-color: var(--accent-color);
    color: rgba(117, 117, 117, 0.5);
 }
 
-
+.modal-form-check{
+   appearance: none;
+}
 .modal-form-check-description::before {
    content: "";
-   display: block;
+   display: inline-block;
    width: 16px;
    height: 16px;
    border: 1.25px solid var(--section-title-color);
    border-radius: 2px;
-   cursor: pointer;
-   background-size: contain;
-   margin-right: 8px;   
+   cursor: pointer;   
+   margin-right: 8px;
 }
 
 .modal-form-check:checked + .modal-form-check-description::before {
+   background-image:url(../images/white-arrow.svg);
+   background-repeat: no-repeat;
+   background-size: contain;
    background-color: var(--accent-color);
-   background-image: url(../images/icon-icon-white-mark.svg);
    
 }
 
- .modal-form-check:focus + .modal-form-check-description::before { 
-   border-color: var(--accent-color);
-   background-image: url(../images/icon-icon-white-mark.svg);
-   
-}
    
  .modal-form-check-description {
    display: flex;
